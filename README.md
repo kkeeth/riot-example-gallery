@@ -3,17 +3,17 @@
 ## Start
 
 ```
-npm start
+yarn start
 ```
 
 ## Test
 
 ```
-npm test
+yarn test
 ```
 
 ## Build
 
 ```
-npm run build
+yarn run build
 ```
