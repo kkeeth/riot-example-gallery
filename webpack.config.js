@@ -1,6 +1,20 @@
 
 const path = require('path')
 const webpack = require('webpack')
+const { registerPreprocessor } = require('@riotjs/compiler')
+const sass = require('node-sass')
+
+registerPreprocessor('css', 'sass', (code, { options }) => {
+  // const { file } = options
+  const {css} = sass.renderSync({
+    data: code
+  })
+
+  return {
+    code: css.toString(),
+    map: null
+  }
+})
 
 module.exports = {
   entry: {
@@ -51,7 +65,8 @@ module.exports = {
         use: [{
           loader: '@riotjs/webpack-loader',
           options: {
-            hot: true
+            hot: true,
+            css: 'sass'
           }
         }]
       },

@@ -76,27 +76,28 @@
     }
   </script>
 
-  <style>
+  <style type="sass">
     :host {
       padding: 2rem 0;
     }
 
     .menu {
       margin: 1rem -1rem;
-    }
 
-    .menu a {
-      padding: 0 1rem;
-      color: black;
-    }
+      a {
+        padding: 0 1rem;
+        color: black;
 
-    .menu a.active.active {
-      font-weight: bold;
-      text-decoration: none;
-    }
+        &.active {
+          font-weight: bold;
+          color: #008080;
+          text-decoration: none;
+        }
 
-    .menu a:hover, .menu a:focus, .menu a:active {
-      text-decoration: underline;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   </style>
 </app>

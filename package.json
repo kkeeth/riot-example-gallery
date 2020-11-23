@@ -36,6 +36,7 @@
     "jsdom": "^16.2.2",
     "jsdom-global": "^3.0.2",
     "mocha": "^8.2.1",
+    "node-sass": "^5.0.0",
     "nyc": "^15.1.0",
     "ress": "^3.0.0",
     "style-loader": "^2.0.0",
